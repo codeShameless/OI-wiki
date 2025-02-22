@@ -6,7 +6,7 @@
 
 一个与插入排序相同的操作是打扑克牌时，从牌桌上抓一张牌，按牌面大小插到手牌后，再抓下一张牌。
 
-![insertion sort animate example](images/insertion-sort-1-animate-example.svg)
+![insertion sort animate example](images/insertion-sort-animate.svg)
 
 ## 性质
 
@@ -40,32 +40,13 @@ $$
 $$
 
 === "C++"
-
-    ```cpp 
-    void insertion_sort(int arr[], int len) {
-        for (int i = 1; i < len; ++i) {
-            int key = arr[i];
-            int j = i - 1;
-            while (j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j];
-                j--;
-            }
-            arr[j + 1] = key;
-        }
-    }
+    ```cpp
+    --8<-- "docs/basic/code/insertion-sort/insertion-sort_1.cpp"
     ```
 
 === "Python"
-
     ```python
-    def insertion_sort(arr, n):
-        for i in range(1, n):
-            key = arr[i]
-            j = i - 1
-            while j >= 0 and arr[j] > key:
-                arr[j + 1] = arr[j]
-                j = j - 1
-            arr[j + 1] = key
+    --8<-- "docs/basic/code/insertion-sort/insertion-sort_1.py"
     ```
 
 ## 折半插入排序
@@ -79,16 +60,15 @@ $$
 ### 代码实现
 
 === "C++"
-
     ```cpp
     void insertion_sort(int arr[], int len) {
-        if (len < 2) return;
-        for (int i = 1; i != len; ++i) {
-            int key = arr[i];
-            auto index = upper_bound(arr, arr + i, key) - arr;
-            // 使用 memmove 移动元素，比使用 for 循环速度更快，时间复杂度仍为 O(n)
-            memmove(arr + index + 1, arr + index, (i - index) * sizeof(int));
-            arr[index] = key;
-        }
+      if (len < 2) return;
+      for (int i = 1; i != len; ++i) {
+        int key = arr[i];
+        auto index = upper_bound(arr, arr + i, key) - arr;
+        // 使用 memmove 移动元素，比使用 for 循环速度更快，时间复杂度仍为 O(n)
+        memmove(arr + index + 1, arr + index, (i - index) * sizeof(int));
+        arr[index] = key;
+      }
     }
     ```

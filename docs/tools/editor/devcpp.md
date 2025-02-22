@@ -1,4 +1,4 @@
-author: ksyx, ouuan, Doveqise, hsfzLZH1, wangqingshiyu, sshwy, NanoApe, DawnMagnet, CamberLoid, royqh1979
+author: topdevst, ksyx, ouuan, Doveqise, hsfzLZH1, wangqingshiyu, sshwy, NanoApe, DawnMagnet, CamberLoid, royqh1979
 
 ## 介绍
 
@@ -25,6 +25,7 @@ Embarcadero Dev-C++[^ref1]是 Bloodshed Dev-C++ 和 Orwell Dev-C++ 的继任者�
 -   `Ctrl + N`: 创建源代码
 -   `Ctrl + O`: 打开文件
 -   `Ctrl + W`: 关闭文件
+-   `Ctrl + Shift + W`: 关闭所有文件
 -   `Ctrl + P`: 打印文件
 
 #### 格式部分
@@ -85,7 +86,7 @@ Embarcadero Dev-C++[^ref1]是 Bloodshed Dev-C++ 和 Orwell Dev-C++ 的继任者�
 
 ### 增加编译选项
 
-点击工具 -> 编译选项，然后选择 "代码生成/优化" 选项卡，下面介绍我自己常用的几个编译选项。
+点击工具 -> 编译选项，然后选择 "代码生成/优化" 选项卡，下面介绍笔者常用的几个编译选项。
 
 #### 开启优化
 
